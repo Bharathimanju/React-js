@@ -150,74 +150,165 @@ import ReactDOM from 'react-dom/client';
 
 
 // Login Form
-import './index.css'
+// import './index.css'
 
-const App=()=>{
+// const App=()=>{
+//     return(
+//         <div className='container'>
+//             <div className='box'>
+//                 <h1>Login</h1>
+//                 <form>
+//                     <div className='inputbox'>
+//                       <label>Name :</label>
+//                       <hr></hr><br/>
+//                        <label>Password:</label>
+//                       <hr></hr>
+//                     </div>
+//                     <br/>
+//                     <div className='forgot'>
+//                         <label><input type="checkbox"/> Remember me</label>
+//                         <a href='#'>forgot Password</a>
+//                     </div> <br/>
+//                     <button type='submit' className='btn'  >Login</button><br/>
+//                     <div className='register'>
+//                         <p> Dont't have an accound ? <a href='#'>Register</a></p>
+//                     </div>
+//                 </form>
+//             </div>
+//         </div>
+//     )
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<App/>)
+
+// =======================================[  8  ]===============================================
+
+// const x=11
+// let text=""
+// if(x>10){
+//     text='world'
+// }
+// else if(x==10){
+//     text="equal"
+// }
+// else{
+//     text="less"
+// }
+// const Myelem=()=>{
+//     return(
+//         <div>
+//             <h1>{text}</h1>
+//         </div>
+//     )
+// }
+// const r2=ReactDOM.createRoot(document.getElementById('root'))
+// r2.render(<Myelem/>)
+
+// // // ==============bb==================[  9  ]====================================================
+// // class component
+// class Sample extends React.Component
+// {
+//     render()
+//     {
+//         return(
+//             <div><h1>Welcome</h1></div>
+//         )
+//     }
+// }
+// const r3=ReactDOM.createRoot(document.getElementById('root'))
+// r3.render(<Sample/>)
+// // ===================================[  10  ]============================================================
+
+// function component
+function Sample(props)
+{
     return(
-        <div className='container'>
-            <div className='box'>
-                <h1>Login</h1>
-                <form>
-                    <div className='inputbox'>
-                      <label>Name :</label>
-                      <hr></hr><br/>
-                       <label>Password:</label>
-                      <hr></hr>
-                    </div>
-                    <br/>
-                    <div className='forgot'>
-                        <label><input type="checkbox"/> Remember me</label>
-                        <a href='#'>forgot Password</a>
-                    </div> <br/>
-                    <button type='submit' className='btn'  >Login</button><br/>
-                    <div className='register'>
-                        <p> Dont't have an accound ? <a href='#'>Register</a></p>
-                    </div>
-                </form>
-            </div>
+        <div>
+            <h1>hello {props.name}</h1>
+            <h2>hello{props.age}</h2>
         </div>
     )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<App/>)
+r1.render(<Sample name="priya" age="20"/>)
 
-// =======================================[  8  ]===============================================
+// ======================================[  11  ]==============================================
 
-const x=11
-let text=""
-if(x>10){
-    text='world'
-}
-else if(x==10){
-    text="equal"
-}
-else{
-    text="less"
-}
-const Myelem=()=>{
+// component in component
+// program 1
+
+function App1(){
     return(
         <div>
-            <h1>{text}</h1>
+            <h1>hello</h1>
+        </div>
+    )
+}
+function App2(){
+    return(
+        <div>
+            <App1/>
+            <h3>welcome</h3>
         </div>
     )
 }
 const r2=ReactDOM.createRoot(document.getElementById('root'))
-r2.render(<Myelem/>)
+r2.render(<App2/>)
 
-// // // ==============bb======================================================================
-// // class component
-class Sample extends React.Component
-{
-    render()
-    {
-        return(
-            <div><h1>Welcome</h1></div>
-        )
-    }
+// =================================[  12  ]===========================================
+// program 2
+
+function Tree(){
+    return(
+        <div>
+            <center>
+            <a href=''>Home</a>&nbsp;&nbsp;&nbsp;
+            <a href=''>Product</a>&nbsp;&nbsp;&nbsp;
+            <a href=''>about</a>&nbsp;&nbsp;&nbsp;
+            <a href=''>contact</a>&nbsp;&nbsp;&nbsp;
+
+            </center>
+            
+
+        </div>
+    )
 }
-const r3=ReactDOM.createRoot(document.getElementById('root'))
-r3.render(<Sample/>)
-// // ===============================================================================================
+function Tree1(){
+    return(
+        <div>
+            <center>
+            <Tree/> <br/>
+            <h1>This is a navbar</h1>
+            </center>
+            
+        </div>
+    )
+}
+const r4=ReactDOM.createRoot(document.getElementById('root'))
+r4.render(<Tree1/>)
+==================================[  13  ]=============================================
+
+import and export
+
+import Branch from './App.js'
+
+const r5=ReactDOM.createRoot(document.getElementById('root'))
+r5.render(<Branch/>)
+
+====================================[  14  ]=============================================
+import Navbar from './App.js'
+const r5=ReactDOM.createRoot(document.getElementById('root'))
+r5.render(<Navbar/>)
+
+
+
+
+
+
+
+
+
+
 
 
 
