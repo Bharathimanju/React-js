@@ -21,7 +21,7 @@ import ReactDOM from 'react-dom/client';
 // const r1= ReactDOM.createRoot(document.getElementById("root"))
 // r1.render(<Sample/>)
 
-// ................................................................................................
+// ......................................[  1  ]....................................................
 
 
 // Basic Rendering
@@ -37,7 +37,7 @@ import ReactDOM from 'react-dom/client';
 // const r1=ReactDOM.createRoot(document.getElementById('root'))
 // r1.render(<Sample/>)
 
-// ....................................................................................................
+// ...........................................[  2   ]..............................................
 
 
 // const App=()=>{
@@ -63,7 +63,7 @@ import ReactDOM from 'react-dom/client';
 // const r1=ReactDOM.createRoot(document.getElementById('root'))
 // r1.render(<App/>)
 
-// ....................................................................................
+// .........................................[  3  ].........................................
 
 // const myname1=<h1>welcome</h1>
 // const myname2=<p>React is a javascript library for building user interface</p>
@@ -90,7 +90,7 @@ import ReactDOM from 'react-dom/client';
 // const r2=ReactDOM.createRoot(document.getElementById('root'));
 // r2.render(myname8)
 
-// ...................................................................................................
+// ...........................................[  4  ]........................................................
 
 // react list
 // const App=()=>{
@@ -108,7 +108,7 @@ import ReactDOM from 'react-dom/client';
 // const r1=ReactDOM.createRoot(document.getElementById('root'))
 // r1.render(<App/>)
 
-// ..............................................................................................
+// .............................................[  5  ].................................................
 
 // Fragment tag
 
@@ -123,25 +123,102 @@ import ReactDOM from 'react-dom/client';
 // const r1= ReactDOM.createRoot(document.getElementById('root'))
 // r1.render(<App/>)
 
-// ================================================================================
+// =============================================[  6  ]==================================================
 
+// import './index.css'
+// const App=()=>{
+//     return(
+//         <div className='container'>
+//             <div className='one'>
+//                 <h3>hello</h3>
+//                 <h4>nice to meet you</h4>
+
+//             </div>
+//             <h1>welcome</h1>
+//             <h2>one</h2>
+//             <form>
+//                 <input type="button" value="submit" className="btn-btn-dark"/>
+//             </form>
+
+//         </div>
+//     )
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<App/>)
+
+// =================================================[  7  ]=================================================
+
+
+// Login Form
 import './index.css'
+
 const App=()=>{
     return(
         <div className='container'>
-            <div className='one'>
-                <h3>hello</h3>
-                <h4>nice to meet you</h4>
-
+            <div className='box'>
+                <h1>Login</h1>
+                <form>
+                    <div className='inputbox'>
+                      <label>Name :</label>
+                      <hr></hr><br/>
+                       <label>Password:</label>
+                      <hr></hr>
+                    </div>
+                    <br/>
+                    <div className='forgot'>
+                        <label><input type="checkbox"/> Remember me</label>
+                        <a href='#'>forgot Password</a>
+                    </div> <br/>
+                    <button type='submit' className='btn'  >Login</button><br/>
+                    <div className='register'>
+                        <p> Dont't have an accound ? <a href='#'>Register</a></p>
+                    </div>
+                </form>
             </div>
-            <h1>welcome</h1>
-            <h2>one</h2>
-            <form>
-                <input type="button" value="submit" className="btn-btn-dark"/>
-            </form>
-
         </div>
     )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<App/>)
+
+// =======================================[  8  ]===============================================
+
+const x=11
+let text=""
+if(x>10){
+    text='world'
+}
+else if(x==10){
+    text="equal"
+}
+else{
+    text="less"
+}
+const Myelem=()=>{
+    return(
+        <div>
+            <h1>{text}</h1>
+        </div>
+    )
+}
+const r2=ReactDOM.createRoot(document.getElementById('root'))
+r2.render(<Myelem/>)
+
+// // // ==============bb======================================================================
+// // class component
+class Sample extends React.Component
+{
+    render()
+    {
+        return(
+            <div><h1>Welcome</h1></div>
+        )
+    }
+}
+const r3=ReactDOM.createRoot(document.getElementById('root'))
+r3.render(<Sample/>)
+// // ===============================================================================================
+
+
+
+
