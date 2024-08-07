@@ -304,165 +304,210 @@ import ReactDOM from 'react-dom/client';
 
 // constructor component
 
-class Sample extends React.Component
-{
-    constructor(){
-        super()
-        this.state={name:"rahul" ,
-            age:10}
-    }
-    render(){
-        return(
-            <div>
-                <h1>{this.state.name}</h1>
-                <h1>{this.state.age}</h1>
+// class Sample extends React.Component
+// {
+//     constructor(){
+//         super()
+//         this.state={name:"rahul" ,
+//             age:10}
+//     }
+//     render(){
+//         return(
+//             <div>
+//                 <h1>{this.state.name}</h1>
+//                 <h1>{this.state.age}</h1>
                 
 
-            </div>
-        )
-    }
-}
-const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Sample/>)
+//             </div>
+//         )
+//     }
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Sample/>)
 
-=====================[  16  ]======================================
+// =====================[  16  ]======================================
 
 
-class Header extends Component
-{
-    text='welcome'
-    constructor(){
-        super();
-        this. state={f1:'blue'}
-    }
-    render()
-    {
-        return(
-            <div>
-                <h1>{this.text}</h1>
-                <h1>{this.state.f1}</h1>
-                <h1 style={{color:this.state.f1}}>welcome</h1>
-            </div>
+// class Header extends Component
+// {
+//     text='welcome'
+//     constructor(){
+//         super();
+//         this. state={f1:'blue'}
+//     }
+//     render()
+//     {
+//         return(
+//             <div>
+//                 <h1>{this.text}</h1>
+//                 <h1>{this.state.f1}</h1>
+//                 <h1 style={{color:this.state.f1}}>welcome</h1>
+//             </div>
 
-        )
-    }
-}
-const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Header/>)
-========================[ 17 ]===============================================
+//         )
+//     }
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Header/>)
+// ========================[ 17 ]===============================================
 
 
 // changing the state object
 
-class Sample extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            emp: {
-                name: "kavi",
-                age: 20,
-                city: "chennai"
-            },
-            showData: false
-        };
-    }
+// class Sample extends React.Component {
+//     constructor() {
+//         super();
+//         this.state = {
+//             emp: {
+//                 name: "kavi",
+//                 age: 20,
+//                 city: "chennai"
+//             },
+//             showData: false
+//         };
+//     }
 
-    showData() {
-        this.setState({ showData: true });
-    }
+//     showData() {
+//         this.setState({ showData: true });
+//     }
 
-    hideData() {
-        this.setState({ showData: false });
-    }
+//     hideData() {
+//         this.setState({ showData: false });
+//     }
 
-    render() {
-        let data;
-        if (this.state.showData==true) {
-            data = 
-                <div>
-                    <b>name: </b> {this.state.emp.name}<br/> <b>age: </b> {this.state.emp.age} <br/><b>city: </b> {this.state.emp.city}<br/>
-                    <button onClick={this.hideData.bind(this)}>hideData</button>
-                </div>
+//     render() {
+//         let data;
+//         if (this.state.showData==true) {
+//             data = 
+//                 <div>
+//                     <b>name: </b> {this.state.emp.name}<br/> <b>age: </b> {this.state.emp.age} <br/><b>city: </b> {this.state.emp.city}<br/>
+//                     <button onClick={this.hideData.bind(this)}>hideData</button>
+//                 </div>
             
-        } else {
-            data = 
-                <div>
-                    <button onClick={this.showData.bind(this)}>showData</button>
-                </div>
+//         } else {
+//             data = 
+//                 <div>
+//                     <button onClick={this.showData.bind(this)}>showData</button>
+//                 </div>
             
-        }
+//         }
 
-        return (
-            <div>
-                <h1>welcome</h1>
-                <h2>Employee Details</h2>
-                {data}
-            </div>
-        );
-    }
-}
+//         return (
+//             <div>
+//                 <h1>welcome</h1>
+//                 <h2>Employee Details</h2>
+//                 {data}
+//             </div>
+//         );
+//     }
+// }
 
-const r1 = ReactDOM.createRoot(document.getElementById('root'));
-r1.render(<Sample />);
+// const r1 = ReactDOM.createRoot(document.getElementById('root'));
+// r1.render(<Sample />);
 
 // ============================[  18  ]===============================================
 
 // react Events
 
-function Football(){
-    const shoot=()=>{
-        alert("goal shooted")
-    }
-    return(
-        <div>
-            <button onClick={shoot}>shoot</button>
-        </div>
-    )
-}
-const r1 = ReactDOM.createRoot(document.getElementById('root'));
-r1.render(<Football/>);
+// function Football(){
+//     const shoot=()=>{
+//         alert("goal shooted")
+//     }
+//     return(
+//         <div>
+//             <button onClick={shoot}>shoot</button>
+//         </div>
+//     )
+// }
+// const r1 = ReactDOM.createRoot(document.getElementById('root'));
+// r1.render(<Football/>);
 
-// ========================[  19  ]=========================================================
+// // ========================[  19  ]=========================================================
 
-function Football(){
-    const shoot=(a)=>{
-        alert(a)
-    }
-    return(
-        <div>
-            <button onClick={()=>shoot("goal shooted")}>shoot</button>
-        </div>
-    )
-}
-const r1 = ReactDOM.createRoot(document.getElementById('root'));
-r1.render(<Football/>);
+// function Football(){
+//     const shoot=(a)=>{
+//         alert(a)
+//     }
+//     return(
+//         <div>
+//             <button onClick={()=>shoot("goal shooted")}>shoot</button>
+//         </div>
+//     )
+// }
+// const r1 = ReactDOM.createRoot(document.getElementById('root'));
+// r1.render(<Football/>);
 
 // ==================================[  19  ]===============================================
 
 // conditional rendering
 
-function Missedgoal()
-{
-    return<h1>MISSED</h1>
-}
-function Madegoal()
-{
-    return<h1>GOAL</h1>
-}
-function Goal(props){
-    const isGoal=props.isGoal;
-    if(isGoal)
-    {
-        return <Madegoal/>
-    }
-    else{
-        return  <Missedgoal/>
-    }
-}
-const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Goal isGoal={Math.random()>0.5}/>)
+// function Missedgoal()
+// {
+//     return<h1>MISSED</h1>
+// }
+// function Madegoal()
+// {
+//     return<h1>GOAL</h1>
+// }
+// function Goal(props){
+//     const isGoal=props.isGoal;
+//     if(isGoal)
+//     {
+//         return <Madegoal/>
+//     }
+//     else{
+//         return  <Missedgoal/>
+//     }
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Goal isGoal={Math.random()>0.5}/>)
 // ====================================[  20  ]=====================================================
 
+// react list
+
+// function Car(props)
+// {
+//     return<li>i am a {props.b1}</li>
+// }
+// function Garage()
+// {
+//     const Cars=["BMW","Audi","TVS"]
+//     return(
+//         <div>
+//             <h1>Garage</h1>
+//             <ul>
+//                 {Cars.map((car)=> <Car b1={car}/>)}
+//             </ul>
+//         </div>
+//     )
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Garage/>)
+
+// =================================[  21  ]=============================================
+
+// getderivedstatefrompros
+class Header extends React.Component{
+    constructor(props)
+    {
+        super(props)
+        this.state={favcolor:"red"}
+    }
+    static getDerivedStateFromProps(props,state){
+        return {favcolor:props.favcolor}
+    }
+    render()
+    {
+        return(
+        <div>
+            <h1>my fav color is {this.state.favcolor}</h1>
+         </div>
+        )
+    }
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Header favcolor="blue"/>)
 
 
 
