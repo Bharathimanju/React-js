@@ -487,27 +487,179 @@ import ReactDOM from 'react-dom/client';
 // =================================[  21  ]=============================================
 
 // getderivedstatefrompros
-class Header extends React.Component{
-    constructor(props)
-    {
-        super(props)
-        this.state={favcolor:"red"}
-    }
-    static getDerivedStateFromProps(props,state){
-        return {favcolor:props.favcolor}
-    }
-    render()
-    {
-        return(
-        <div>
-            <h1>my fav color is {this.state.favcolor}</h1>
-         </div>
-        )
-    }
-}
+// class Header extends React.Component{
+//     constructor(props)
+//     {
+//         super(props)
+//         this.state={favcolor:"red"}
+//     }
+//     static getDerivedStateFromProps(props,state){
+//         return {favcolor:props.favcolor}
+//     }
+//     render()
+//     {
+//         return(
+//         <div>
+//             <h1>my fav color is {this.state.favcolor}</h1>
+//          </div>
+//         )
+//     }
+// }
 
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Header favcolor="blue"/>)
+
+// =========================[  22  ]===================================================================
+
+// class Header extends React.Component{
+//     constructor(props){
+//         super(props)
+//         this.state={empname:"azar"};
+//     }
+//     static getDerivedStateFromProps(props,state){
+//         return{empname:props.empname};
+//     }
+//     changeEmployee=()=>{
+//         this.setState({empname:"mohamed"})
+//     }
+//     render(){
+//         return(
+//             <div>
+//                 <h1>this is rener page{this.state.empname}</h1>
+//                 <button type="submit" onClick={this.changeEmployee}>click</button>
+//             </div>
+//         )
+//     }
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Header empname="tech"/>)
+
+// ======================================[  23  ]==================================================
+
+
+// class Header extends React.Component{
+//     constructor(props){
+//         super(props);
+//         this.state={empname:"Menaga"};
+//     }
+//     static getDrivedStateFromProps(props,state){
+//         return{empname:props.empname};
+//     }
+//     changeEmployee=()=>{
+//         this.setState({empname:"Mohan"});
+//     }
+//     render(){
+//         return(
+//             <div>
+//                 <h1>This is Render page{this.state.empname}</h1>
+//                 <button type='submit' onClick={this.changeEmployee}>Click</button>
+//             </div>
+//         );
+//     }
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'));
+// r1.render(<Header empname="tech"/>);
+
+// ======================================[ 24 ]==========================================================
+
+// componentdidmount
+// class TimerComponent extends React.Component
+// {
+//     constructor(props)
+//     {
+//         super(props)
+//         this.state={seconds:0}
+//     };
+// }
+// componentDidMount()
+// {
+//     this.timerID=setInterval(
+//         ()=>this.setState({seconds:this.state.seconds+1}),
+//         1000
+//     );
+
+// }
+// comonentWillUnmount()
+// {
+//     clearInterval(this.timerID)
+// }
+// render()
+// {
+//     return(
+//         <div>
+//                 <h1>timer component</h1>
+//                 <h2>
+//                     time elapsed {this.state.seconds}sec
+//                 </h2>
+//         </div>
+//     );
+
+// }
+
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<TimerComponent/>)
+
+// =================================[  25 ]================================================
+
+
+// shouldidcomponentupdate
+
+// class Header extends React.Component
+// {
+//     constructor(props)
+//     {
+//         super(props)
+//         this.state={favcolor:'red'}
+//     }
+//     shouldComponentUpdate()
+//     {
+//         return true 
+//     }
+//     changecolor =()=> {
+//         this.setState({favcolor:"blue"})
+//     }
+//     render(){
+//         return(
+//             <div>
+//                 <h1>this is a Render page : {this.state.favcolor}</h1>
+//                 <button type='submit' onClick={this.changecolor}>click</button>
+//             </div>
+//         )
+//     }
+// }
+// const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Header/>)
+
+// ================================[  26  ]===================================================
+
+//react hooks 
+
+// usestate
+import { useState } from 'react';
+function Counter(){
+    const [count,setCount]=useState (10)
+    const[name,setName]=useState ("manju")
+    return(
+        <div>
+            <h1>Count:{count}</h1>
+            <button type="submit" onClick={()=>setCount(count+1)}>click</button>
+            <h1>name:{name}</h1>
+            <button type="submit" onClick={()=>setName("bharathi")}>click</button>
+        </div>
+    )
+}
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Header favcolor="blue"/>)
+r1.render(<Counter/>)
+
+// ==============================[  27  ]====================================================
+
+// useeffect
+
+
+
+
+
+
 
 
 
