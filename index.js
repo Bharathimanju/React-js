@@ -645,6 +645,7 @@ function Counter(){
             <button type="submit" onClick={()=>setCount(count+1)}>click</button>
             <h1>name:{name}</h1>
             <button type="submit" onClick={()=>setName("bharathi")}>click</button>
+            
         </div>
     )
 }
